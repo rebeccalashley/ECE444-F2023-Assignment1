@@ -13,3 +13,7 @@
 ![utilstestscommit](https://github.com/rebeccalashley/ECE444-F2023-Assignment1/assets/60635262/16b44279-4e14-4770-8c2e-89d9fd2be4a4)
 
 ![unittestcommit](https://github.com/rebeccalashley/ECE444-F2023-Assignment1/assets/60635262/d322feb7-46e9-4c5b-b9a6-1d6c336937a4)
+
+![c1](https://github.com/rebeccalashley/ECE444-F2023-Assignment1/assets/60635262/53bad9d5-83b1-4f48-a0c2-3272041c0c11)
+
+![c2](https://github.com/rebeccalashley/ECE444-F2023-Assignment1/assets/60635262/fac8af10-3839-464c-8056-0716d203b546)
