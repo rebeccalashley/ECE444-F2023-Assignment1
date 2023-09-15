@@ -1,7 +1,10 @@
-class utils :
+class utils:
 
     def reversed(num):
         
+        r_num = None
+        unit = None
+
         if num.isdigit(): 
             while num != 0: 
                 unit = num % 10
@@ -11,9 +14,14 @@ class utils :
         else:
             print("input error: not an integer")
 
+        return r_num
+
         
 
     def formatter(num):
+
+        binary = None
+        octal = None
 
         if num.isdigit():
             binary = bin(num)
@@ -21,5 +29,7 @@ class utils :
 
         else:
             print("input error: not an integer")
+
+        return binary, octal
 
 
