@@ -1,20 +1,54 @@
+import unittest
+
 from utils import utils
 
-def test_reversed():
-    assert utils.reversed(4065) == 5604, "Case 1 Fail"
-    assert utils.reversed("hello") == None, "Case 2 Fail"
-    assert utils.reversed("264") == 462, "Case 3 Fail"
-    assert utils.reversed(45.7) == None, "Case 4 Fail"
-    assert utils.reversed("25.87") == None, "Case 5 Fail"
+class TestUtils(unittest.TestCase):
+    
+    # Reversed Tests
+    def test_r_int1(self):
+        result = utils.reversed(4065)
+        self.assertEqual(result, 5604)
 
-def test_formatter():
-    assert utils.formatter(170)[0] == 10101010, "Case 1 Fail"
-    assert utils.formatter("hello")[0] == None, "Case 2 Fail"
-    assert utils.formatter("25")[0] == 462, "Case 3 Fail"
-    assert utils.formatter(45.7)[0] == None, "Case 4 Fail"
-    assert utils.formatter("25.87")[0] == None, "Case 5 Fail"
-    assert utils.formatter(325)[1] == 505, "Case 6 Fail"
-    assert utils.formatter("hello")[1] == None, "Case 7 Fail"
-    assert utils.formatter("47")[1] == 57, "Case 8 Fail"
-    assert utils.formatter(45.7)[1] == None, "Case 9 Fail"
-    assert utils.formatter("25.87")[1] == None, "Case 10 Fail"
+    def test_r_int2(self):
+        result = utils.reversed(385279)
+        self.assertEqual(result, 972583)
+
+    def test_r_str(self):
+        result = utils.reversed("hello")
+        self.assertEqual(result, None)
+
+    def test_r_fl(self):
+        result = utils.reversed(45.7)
+        self.assertEqual(result, None)
+
+    def test_r_str_int(self):
+        result = utils.reversed("264")
+        self.assertEqual(result, None)
+
+    # Formatter Tests
+    
+    def test_f_int1(self):
+        result = utils.formatter(170)
+        self.assertEqual(result, (0b10101010, 0o252))
+
+    def test_f_int2(self):
+        result = utils.formatter(38)
+        self.assertEqual(result, (0b100110, 0o46))
+
+    def test_f_str(self):
+        result = utils.formatter("hello")
+        self.assertEqual(result, (None, None))
+
+    def test_f_fl(self):
+        result = utils.formatter(45.7)
+        self.assertEqual(result, (None, None))
+
+    def test_f_str_int(self):
+        result = utils.formatter("264")
+        self.assertEqual(result, (None, None))
+
+
+
+if __name__ == '__main__':
+    unittest.main()
+

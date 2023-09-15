@@ -5,7 +5,8 @@ class utils:
         r_num = None
         unit = None
 
-        if num.isdigit(): 
+        if isinstance(num, int): 
+            r_num = 0
             while num != 0: 
                 unit = num % 10
                 r_num = r_num * 10 + unit
@@ -23,7 +24,7 @@ class utils:
         binary = None
         octal = None
 
-        if num.isdigit():
+        if isinstance(num, int): 
             binary = bin(num)
             octal = oct(num)
 
